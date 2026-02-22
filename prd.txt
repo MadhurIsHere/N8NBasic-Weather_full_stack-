@@ -1,0 +1,17 @@
+Product Requirements Document (PRD): Daily Weather Logger
+Project Objective
+
+To build a full-stack automated application that fetches, stores, and visualizes weather data. This project serves as a practical, hands-on environment to master React, Python backend development, SQL databases, and containerized infrastructure.
+
+Tech Stack
+Frontend: React.js
+Backend: Python (FastAPI)
+Database: MySQL (Local via Docker Volume)
+Automation: n8n
+Infrastructure: Docker, Docker Compose, Cloudflare Tunnels
+Core Features
+Automated Data Pipeline: n8n automatically queries the OpenWeatherMap API every minute and inserts the raw JSON response into the MySQL database.
+RESTful API Middle Layer: A FastAPI backend connects securely to the MySQL database and provides a GET /logs endpoint for the frontend to consume.
+Current Weather Display: The UI features a center console highlighting the most recent temperature, humidity, wind speed, and precipitation metrics.
+Historical Data Sidebar: A collapsible left-hand menu displaying a tabular history of past weather logs.
+Trend Visualization: A right-hand chart plotting the last 60 minutes of temperature data to visualize immediate weather trends.
